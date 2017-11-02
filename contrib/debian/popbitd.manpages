@@ -1,0 +1,3 @@
+debian/manpages/popbitd.1
+debian/manpages/popbit.conf.5
+debian/manpages/popbit-cli.1

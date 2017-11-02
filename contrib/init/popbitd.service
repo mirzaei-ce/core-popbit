@@ -1,0 +1,22 @@
+[Unit]
+Description=Popbit's distributed currency daemon
+After=network.target
+
+[Service]
+User=popbit
+Group=popbit
+
+Type=forking
+PIDFile=/var/lib/popbitd/popbitd.pid
+ExecStart=/usr/bin/popbitd -daemon -pid=/var/lib/popbitd/popbitd.pid \
+-conf=/etc/popbit/popbit.conf -datadir=/var/lib/popbitd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

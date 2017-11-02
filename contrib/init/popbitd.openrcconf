@@ -1,0 +1,33 @@
+# /etc/conf.d/popbitd: config file for /etc/init.d/popbitd
+
+# Config file location
+#POPBITD_CONFIGFILE="/etc/popbit/popbit.conf"
+
+# What directory to write pidfile to?  (created and owned by $POPBITD_USER)
+#POPBITD_PIDDIR="/var/run/popbitd"
+
+# What filename to give the pidfile
+#POPBITD_PIDFILE="${POPBITD_PIDDIR}/popbitd.pid"
+
+# Where to write popbitd data (be mindful that the blockchain is large)
+#POPBITD_DATADIR="/var/lib/popbitd"
+
+# User and group to own popbitd process
+#POPBITD_USER="popbit"
+#POPBITD_GROUP="popbit"
+
+# Path to popbitd executable
+#POPBITD_BIN="/usr/bin/popbitd"
+
+# Nice value to run popbitd under
+#POPBITD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+POPBITD_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for popbitd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+POPBITD_SIGTERM_TIMEOUT=60

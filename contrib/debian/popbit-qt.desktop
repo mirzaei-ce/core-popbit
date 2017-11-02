@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Popbit
+Comment=Popbit P2P Cryptocurrency
+Comment[fr]=Popbit, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Popbit, eşten eşe kriptografik sanal para birimi
+Exec=popbit-qt %u
+Terminal=false
+Type=Application
+Icon=popbit128
+MimeType=x-scheme-handler/popbit;
+Categories=Office;Finance;
